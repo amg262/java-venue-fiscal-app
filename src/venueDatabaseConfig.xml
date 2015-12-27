@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd" xmlns:aop="http://www.springframework.org/schema/aop">
+   
+    <!--Beans for different Venues-->
+    <bean id="millerPark" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="MILLER PARK" />
+        <constructor-arg type="String" value="1 Brewers Way" />
+        <constructor-arg type="String" value="Milwaukee" />
+        <constructor-arg type="String" value="WI" />
+        <constructor-arg type="String" value="(414) 902-4400" />
+        <constructor-arg ref="millerParkStrategy" />
+    </bean>
+    
+    <bean id="fenwayPark" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="FENWAY PARK" />
+        <constructor-arg type="String" value="4 Yawkey Way" />
+        <constructor-arg type="String" value="Boston" />
+        <constructor-arg type="String" value="MS" />
+        <constructor-arg type="String" value="(617) 226-6666" />
+        <constructor-arg ref="fenwayParkStrategy" />
+    </bean>
+    
+    <bean id="buschStadium" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="BUSCH STADIUM" />
+        <constructor-arg type="String" value="700 Clark Avenue" />
+        <constructor-arg type="String" value="St. Louis" />
+        <constructor-arg type="String" value="MO" />
+        <constructor-arg type="String" value="(314) 345-9600" />
+        <constructor-arg ref="buschStadiumStrategy" />
+    </bean>
+    
+    <bean id="pncPark" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="PNC PARK" />
+        <constructor-arg type="String" value="115 Federal St" />
+        <constructor-arg type="String" value="Pittsburgh" />
+        <constructor-arg type="String" value="PA" />
+        <constructor-arg type="String" value="(412) 321-2827" />
+        <constructor-arg ref="pncParkStrategy" />
+    </bean>
+    
+    <bean id="wrigleyField" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="WRIGLEY FIELD" />
+        <constructor-arg type="String" value="060 W Addison St" />
+        <constructor-arg type="String" value="Chicago" />
+        <constructor-arg type="String" value="IL" />
+        <constructor-arg type="String" value="(773) 404-2827" />
+        <constructor-arg ref="wrigleyFieldStrategy" />
+    </bean>
+    
+    <bean id="yankeeStadium" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="YANKEE STADIUM" />
+        <constructor-arg type="String" value="1 E 161st St" />
+        <constructor-arg type="String" value="Bronx" />
+        <constructor-arg type="String" value="NY" />
+        <constructor-arg type="String" value="(718) 293-4300" />
+        <constructor-arg ref="yankeeStadiumStrategy" />
+    </bean>
+    
+    <bean id="lambeauField" class="venuefiscalapp.Stadium">
+        <constructor-arg type="String" value="LAMBEAU FIELD" />
+        <constructor-arg type="String" value="1265 Lombardi Ave." />
+        <constructor-arg type="String" value="Green Bay" />
+        <constructor-arg type="String" value="WI" />
+        <constructor-arg type="String" value="(920) 496-5700" />
+        <constructor-arg ref="lambeauFieldStrategy" />
+    </bean>
+
+    
+    <!--Beans for different VenueStrategy objects-->
+    <bean id="millerParkStrategy" class="venue.strategy.MillerPark"/>
+    <bean id="fenwayParkStrategy" class="venue.strategy.FenwayPark"/>
+    <bean id="buschStadiumStrategy" class="venue.strategy.BuschStadium"/>
+    <bean id="pncParkStrategy" class="venue.strategy.PncPark"/>
+    <bean id="wrigleyFieldStrategy" class="venue.strategy.WrigleyField"/>
+    <bean id="yankeeStadiumStrategy" class="venue.strategy.YankeeStadium"/>
+    <bean id="lambeauFieldStrategy" class="venue.strategy.LambeauField"/>
+    
+</beans>

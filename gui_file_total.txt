@@ -1,0 +1,9 @@
+Net Games:    3
+Gross:       $1,497,000.00
+Net Atten:     60,000
+Net Games:    3
+Gross:       $2,994,000.00
+Net Atten:     120,000
+Net Games:    4
+Gross:       $1,996,000.00
+Net Atten:     80,000

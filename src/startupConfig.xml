@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd" xmlns:aop="http://www.springframework.org/schema/aop">
+   
+    <!--Bean for LoginWindow and TerminalClass-->
+    <bean id="loginWindow" class="venuefiscalapp.LoginWindow"/>
+    <bean id="device" class="venuefiscalapp.Terminal" />
+    
+    <!--Beans for different OutputStrategy objects-->
+    <bean id="guiOutput" class="Io.strategy.GuiOutput"/>
+    <bean id="consoleOutput" class="Io.strategy.ConsoleOutput"/>
+    <bean id="fileOutput" class="Io.strategy.FileOutput"/>
+    <bean id="guiAndFileOutput" class="Io.strategy.GuiAndFileOutput"/>
+    <bean id="consoleAndFileOutput" class="Io.strategy.ConsoleAndFileOutput"/>
+    
+</beans>
